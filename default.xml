@@ -6,6 +6,10 @@
            review="android-review.googlesource.com"
            revision="refs/tags/android-6.0.1_r3" />
 
+  <remote name="suda"
+          fetch="https://github.com"
+          review=".." /> 
+
   <remote  name="github"
            fetch=".."
            review="review.cyanogenmod.org" />
@@ -218,19 +222,14 @@
   <project path="packages/apps/Bluetooth" name="CyanogenMod/android_packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/BluetoothExt" name="CyanogenMod/android_packages_apps_BluetoothExt" />
   <project path="packages/apps/Browser" name="CyanogenMod/android_packages_apps_Browser" groups="pdk-fs" />
-  <project path="packages/apps/Calendar" name="CyanogenMod/android_packages_apps_Calendar" groups="pdk-fs" />
   <project path="packages/apps/Camera2" name="CyanogenMod/android_packages_apps_Camera2" groups="pdk-fs" />
   <project path="packages/apps/CarrierConfig" name="CyanogenMod/android_packages_apps_CarrierConfig" groups="pdk-fs" />
   <project path="packages/apps/CellBroadcastReceiver" name="CyanogenMod/android_packages_apps_CellBroadcastReceiver" groups="pdk-fs" />
   <project path="packages/apps/CertInstaller" name="CyanogenMod/android_packages_apps_CertInstaller" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/CMBugReport" name="CyanogenMod/android_packages_apps_CMBugreport" />
-  <project path="packages/apps/CMFileManager" name="CyanogenMod/android_packages_apps_CMFileManager" />
   <project path="packages/apps/CMUpdater" name="CyanogenMod/android_packages_apps_CMUpdater" />
   <project path="packages/apps/CMWallpapers" name="CyanogenMod/android_packages_apps_CMWallpapers" />
-  <project path="packages/apps/Contacts" name="CyanogenMod/android_packages_apps_Contacts" groups="pdk-fs" />
-  <project path="packages/apps/ContactsCommon" name="CyanogenMod/android_packages_apps_ContactsCommon" groups="pdk-fs" />
   <project path="packages/apps/DeskClock" name="CyanogenMod/android_packages_apps_DeskClock" groups="pdk-fs" />
-  <project path="packages/apps/Dialer" name="CyanogenMod/android_packages_apps_Dialer" groups="pdk-fs" />
   <project path="packages/apps/Eleven" name="CyanogenMod/android_packages_apps_Eleven" />
   <project path="packages/apps/Email" name="CyanogenMod/android_packages_apps_Email" groups="pdk-fs" />
   <project path="packages/apps/ExactCalculator" name="CyanogenMod/android_packages_apps_ExactCalculator" groups="pdk-fs" />
@@ -238,11 +237,9 @@
   <project path="packages/apps/FMRadio" name="CyanogenMod/android_packages_apps_FMRadio" groups="pdk-fs" />
   <project path="packages/apps/Gallery2" name="CyanogenMod/android_packages_apps_Gallery2" groups="pdk-fs" />
   <project path="packages/apps/HTMLViewer" name="CyanogenMod/android_packages_apps_HTMLViewer" groups="pdk-fs" />
-  <project path="packages/apps/InCallUI" name="CyanogenMod/android_packages_apps_InCallUI" groups="pdk-fs" />
   <project path="packages/apps/KeyChain" name="CyanogenMod/android_packages_apps_KeyChain" groups="pdk-fs" />
   <project path="packages/apps/LockClock" name="CyanogenMod/android_packages_apps_LockClock" />
   <project path="packages/apps/ManagedProvisioning" name="CyanogenMod/android_packages_apps_ManagedProvisioning" groups="pdk-fs" />
-  <project path="packages/apps/Messaging" name="CyanogenMod/android_packages_apps_Messaging" groups="pdk-fs" />
   <project path="packages/apps/Nfc" name="CyanogenMod/android_packages_apps_Nfc" groups="apps_nfc,pdk-fs" />
   <project path="packages/apps/PackageInstaller" name="CyanogenMod/android_packages_apps_PackageInstaller" groups="pdk-fs" />
   <project path="packages/apps/PhoneCommon" name="CyanogenMod/android_packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" />
@@ -299,7 +296,7 @@
   <project path="system/qcom" name="CyanogenMod/android_system_qcom" groups="qcom" />
   <project path="system/security" name="CyanogenMod/android_system_security" groups="pdk" />
   <project path="system/vold" name="CyanogenMod/android_system_vold" groups="pdk" />
-  <project path="vendor/cm" name="CyanogenMod/android_vendor_cm" />
+  <project path="vendor/cm" name="3EleVen/android_vendor_cm" />
   <project path="vendor/cmsdk" name="CyanogenMod/cm_platform_sdk" />
   <project path="vendor/qcom/opensource/display-frameworks" name="CyanogenMod/android_vendor_qcom_opensource_display-frameworks" />
   <project path="vendor/qcom/opensource/dpm" name="CyanogenMod/android_vendor_qcom_opensource_dpm" />
@@ -547,5 +544,17 @@
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" remote="aosp" />
 <!-- END AOSP -->
+
+<!-- BEGIN SUDAMOD -->
+  <project path="external/suda/SudaSDKs" remote="suda" revision="sm-2.0" name="SudaMod/android_external_suda_SudaSDKs" />
+  <project path="packages/apps/Calendar" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_Calendar" groups="pdk-fs" />  
+  <project path="packages/apps/Messaging" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_Messaging" groups="pdk-fs" />
+  <project path="packages/apps/InCallUI" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_InCallUI" groups="pdk-fs" /> 
+  <project path="packages/apps/Dialer" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_Dialer" groups="pdk-fs" />
+  <project path="packages/apps/CMFileManager" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_CMFileManager" />
+  <project path="packages/apps/Contacts" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_Contacts" groups="pdk-fs" /> 
+  <project path="packages/apps/ContactsCommon" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_apps_ContactsCommon" groups="pdk-fs" />
+  <project path="packages/providers/PhoneLocationProvider" remote="suda" revision="sm-2.0" name="SudaMod/android_packages_provider_PhoneLocationProvider" /> 
+<!-- END SUDAMOD -->
 
 </manifest>
